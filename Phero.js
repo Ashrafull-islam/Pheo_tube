@@ -15,12 +15,24 @@ const displayCategories=(iteam)=>{
     btn.innerText = iteam.category;
     btn.onclick =() =>{
         mainCard(iteam.category_id);
+        loader(true);
     }
     categoriesId.appendChild(btn);
     });
 }
 cetagory();
 
+// loader section
+
+const loader=(loading)=>{
+    const loaderId=document.getElementById('loader');
+    if(loading){
+        loaderId.classList.remove('hidden');
+    }
+    else{
+        loaderId.classList.add('hidden');
+    }
+}
 
 // main card section 
 const mainCard= async (categoryId)=>{
@@ -53,4 +65,6 @@ const Card=(data)=>{
     `;
     Card_Id.appendChild(card);
     });
+    loader(false);
+
 }
