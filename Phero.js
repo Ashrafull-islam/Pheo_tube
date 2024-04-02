@@ -31,5 +31,26 @@ const mainCard= async (categoryId)=>{
 }
 
 const Card=(data)=>{
-    
+    const Card_Id=document.getElementById('Card_id');
+    // clear preveus section 
+    Card_Id.innerHTML='';
+    data.forEach(element => {
+    const card=document.createElement('div');
+    card.classList.add('card', 'w-96');
+    card.innerHTML=`
+    <figure><img src="${element.thumbnail}" alt="Shoes" /></figure>
+    <div class="card-body">
+    <div class="flex gap-2">
+    <img class="p-4" src="${element.authors.profile_picture}" alt="profile">
+      <h2 class="card-title">${element.title}</h2>
+    </div>
+    <div class="flex">
+    <p>${element.authors.profile_name}</p>
+    <p>${element.authors.verified}</p>
+    </div>
+    <p>${element.others.views}</p>
+      </div>
+    `;
+    Card_Id.appendChild(card);
+    });
 }

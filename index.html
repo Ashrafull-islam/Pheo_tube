@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
     <script src="Phero.js"></script>
 </head>
-<body class="mx-w-11/12 mx-auto p-8">
-    <header >
+<body>
+    <header  class="w-11/12 mx-auto p-8">
         <div class=" flex justify-between h-10">
             <img src="img/Logo.png" alt="PH Tube">
             <button class="btn bg-gray-400 text-gray-600 font-semibold text-xl">Sort by view</button>
@@ -18,22 +18,14 @@
         </div>
         <hr class=" my-14 border-1 border-gray-400 ">
     </header>
-    <main>
-        <div class="flex justify-center gap-14" id="Catagories"></div>
+    <main class="w-11/12 mx-auto p-8 justify-around">
+        <div class="flex justify-center gap-14 mb-12" id="Catagories"></div>
         <!-- temporary card  -->
-        <div>
-            
+        <div id="Card_id" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
         </div>
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
+        
+     
     </main>
     <footer>
 
